@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #92819F;
+}
+
+header {
+    background: #92819F;
+    color: #fff;
+    padding: 15px 0;
+    .site-logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+main {
+    padding: 60px 0;
+}

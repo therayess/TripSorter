@@ -1,0 +1,31 @@
+#landing {
+    #trip-form {
+        background: #FFBB85;
+        border-radius: 4px;
+        padding: 15px 30px;
+        color: #fff;
+        input[type=submit] {
+            margin-top: 10px;
+            width: 100%;
+            height: 50px;;
+            background: #C49BA8;
+            border: 0;
+            outline: 0;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+    }
+    .result-row {
+        margin: 15px 0;
+        padding: 15px 0;
+        border-bottom: 1px solid #C49BA8;
+        font-size: 20px;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .transport {
+            font-size: 18px;
+            color: #E7A5A0;
+        }
+    }
+}

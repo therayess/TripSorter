@@ -1,0 +1,40 @@
+{
+  "name": "TripSorter",
+  "version": "1.0.0",
+  "description": "A tripsorter using dijktra's shortest path algorithm",
+  "main": "index.js",
+  "scripts": {
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "start": "node index.js"
+  },
+  "author": "Ammar Rayess <therayess@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "express": "^4.13.4",
+    "fs": "0.0.1-security",
+    "jquery": "^3.1.1",
+    "json-loader": "^0.5.7",
+    "lodash": "^4.17.4",
+    "postcss-loader": "^1.1.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-register": "^6.14.0",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7"
+  }
+}
