@@ -29134,24 +29134,28 @@
 	        var deal = input[i];
 
 	        var distanceObj = {
-	            'cost': deal.cost - deal.discount,
+	            'cost': deal.cost - deal.cost / 100 * deal.discount,
 	            'duration': parseInt(deal.duration.h * 60) + parseInt(deal.duration.m),
 	            'reference': deal.reference
 	        };
 
 	        // {transport: cost}
 	        // example: {bus: 40}
-	        var lengthObj = {};
-	        lengthObj[deal.transport] = distanceObj;
+	        var weightObj = {};
+	        weightObj[deal.transport] = distanceObj;
 
 	        // {arrivalCity: {transport: cost}}
 	        // example: {amsterdam: {car: 50}}
 	        var edgeObj = {};
-	        edgeObj[deal.arrival] = lengthObj;
+	        edgeObj[deal.arrival] = weightObj;
 
 	        if (deal.departure in vertices) {
-	            // if object already defined, add another length obj
-	            vertices[deal.departure][deal.arrival][deal.transport] = distanceObj;
+	            // if object already defined, add another weight obj
+	            if (!(deal.arrival in vertices[deal.departure])) {
+	                vertices[deal.departure][deal.arrival] = weightObj;
+	            } else {
+	                vertices[deal.departure][deal.arrival][deal.transport] = distanceObj;
+	            }
 	        } else {
 	            // else, set {departureCity: {arrivalCity: {transport: cost}}}
 	            // example: {London: {Amsterdam: {car: 50}}}
@@ -29159,8 +29163,12 @@
 	        }
 	    }
 
+	    console.log(vertices);
+
 	    for (var i = 0; i < input.length; i++) {
 	        var deal = input[i];
+
+	        console.log('deal: ', deal);
 
 	        if (!(deal.arrival in vertices)) {
 	            vertices[deal.arrival] = {};
